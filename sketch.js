@@ -16,9 +16,6 @@ var player_img;
 var playerScore1 = 0;
 var playerScore2 = 0;
 
-text("Score: "+ playerScore1, 200, 550);
-text("Score: "+ playerScore2, 800, 550);
-
 function preload(){
   back_img = loadImage("images/jungle.jpg");
   player_img = loadImage("images/basket2.png");
@@ -40,10 +37,12 @@ function setup() {
 
 function draw() {
   background(back_img);
+
+  text("Score: "+ playerScore1, 200, 550);
+  text("Score: "+ playerScore2, 800, 550);  
   
    if (playerCount === 2) {
      game.update(1);
-     score = score + 1;
    }
    if (gameState === 1) {
      clear(); 

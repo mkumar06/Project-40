@@ -106,8 +106,10 @@ class Game{
                   if (player.index !== null) {
                      //Destroy the objects (Used the one in the class project 39).
                      //Added condition to calculate the score and used update to increase the values in the database.
-                     fruitObject.destroy();
-                     game.update(1);
+                     if(fruitGroup.isTouching(player1 || player2)) {}
+                        fruitGroup.destroyEach();
+                        game.update(1);
+                    }
                   }
                 
 
