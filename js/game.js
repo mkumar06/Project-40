@@ -41,13 +41,11 @@ class Game{
 
                 Player.getPlayerInfo();
                  image(back_img, 0, 0, 1000, 800);
-                 var x =100;
-                 var y=200;
-                 var index =0;
                  drawSprites();
                  for(var plr in allPlayers){
-                    
-                    
+                    var x =100;
+                    var y=200;
+                    var index =0;   
                      index = index+1;
                      x = 500-allPlayers[plr].distance;
                      y=500;
@@ -106,7 +104,7 @@ class Game{
                   if (player.index !== null) {
                      //Destroy the objects (Used the one in the class project 39).
                      //Added condition to calculate the score and used update to increase the values in the database.
-                     if(fruitGroup.isTouching(player1 || player2)) {}
+                     if(fruitGroup.isTouching(player1) || fruitGroup.isTouching(player2)) {
                         fruitGroup.destroyEach();
                         game.update(1);
                     }
