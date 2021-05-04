@@ -37,10 +37,7 @@ function setup() {
 
 function draw() {
   background(back_img);
-
-  text("Score: "+ playerScore1, 200, 550);
-  text("Score: "+ playerScore2, 800, 550);  
-  
+    
    if (playerCount === 2) {
      game.update(1);
    }

@@ -63,11 +63,9 @@ class Game{
                      }
                     
                      //text to display player score
-                     text("Score: "+ playerScore1, 200, 550);
-                     text("Score: "+ playerScore2, 800, 550);
-
-                 
-                 }
+                     text("Score: " + allPlayers["player1"].score, 200, 550); 
+                     text("Score: " + allPlayers["player2"].score, 800, 550);
+                    }
                 
                 
                  
@@ -107,6 +105,8 @@ class Game{
                      if(fruitGroup.isTouching(player1) || fruitGroup.isTouching(player2)) {
                         fruitGroup.destroyEach();
                         game.update(1);
+                        player.score++; 
+                        player.update()
                     }
                   }
                 
